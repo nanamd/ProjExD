@@ -19,7 +19,7 @@ mozi = ["A","B","C","D","E",
 r=random.sample(mozi, 10)
 print("対象文字:"+r)
 #対象文字から‐2文字させる(これを表示文字にする)
-taisyou=r-2
+taisyou=r-[2]
 print("表示文字"+taisyou)
 
 
