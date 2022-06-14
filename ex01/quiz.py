@@ -25,4 +25,4 @@ def kaitou(seikai):
 if __name__=="__main__":
     main()
 
-print("C0A21116,C0A21020")
+print("C0A21116,C0A21020,C0A21044")
