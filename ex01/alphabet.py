@@ -10,11 +10,7 @@
 #ランダムを使うのでrandom変数呼び出し
 import random
 #アルファベットのリスト
-mozi = ["A","B","C","D","E",
-    "F","G","H","I","J","K","L",
-    "M","N","O","P","Q","R","S",
-    "T","U","O","P","Q","R","S",
-    "T","U","V","W","X","Y","Z"]
+mozi = [chr(ord("a")+i)for i in range(26)]
 #10文字をランダムで表示させる
 r=random.sample(mozi, 10)
 print("対象文字:"+r)
