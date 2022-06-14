@@ -17,10 +17,10 @@ mozi = ["A","B","C","D","E",
     "T","U","V","W","X","Y","Z"]
 #10文字をランダムで表示させる
 r=random.sample(mozi, 10)
-print(r)
-
+print("対象文字:"+r)
+#対象文字から‐2文字させる(これを表示文字にする)
 taisyou=r-2
-print(taisyou)
+print("表示文字"+taisyou)
 
 
 #def taisyou():
