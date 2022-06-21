@@ -1,10 +1,10 @@
-# Libraries Import
+# Libraries Import　引っ張ってくる
 import tkinter as tk
 from tkinter import ttk
  
 # Define
 BUTTON = [
-    ['', 'B', 'C', '/'],
+    ['', 'AC', 'C', '/'],
     ['7', '8', '9', '*'],
     ['4', '5', '6', '-'],
     ['1', '2', '3', '+'],
@@ -20,7 +20,7 @@ class CaluGui(object):
         self.calc_str = '' # 計算用の文字列
  
         # Window Setting
-        app.title('簡易的な電卓を作ってみた') # Window のタイトル
+        app.title('電卓') # Window のタイトル
         #app.geometry('300x450') # Window のサイズ
  
         # Frame Setting
