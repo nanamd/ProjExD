@@ -32,10 +32,12 @@ class Tuika(object):
 # 計算結果や計算式の場所の設定
         self.calc_var = tk.StringVar() # 計算式用の動的変数
         self.ans_var = tk.StringVar() # 結果用の動的変数
+        #色やフォントの変化　色は緑
         calc_label = tk.Label(calc_frame, textvariable=self.calc_var, 
-                            font=("Ink Free",20), bg="green2") # 計算式用のLabel
+                            font=("Ink Free",20), bg="green2") 
+        #色は水色
         ans_label = tk.Label(calc_frame, textvariable=self.ans_var, 
-                            font=("Ink Free",15), bg="turquoise1") # 結果用のLabel
+                            font=("Ink Free",15), bg="turquoise1") 
         calc_label.pack(anchor=tk.E) # 右揃えで配置
         ans_label.pack(anchor=tk.E) # 右揃えで配置
  
