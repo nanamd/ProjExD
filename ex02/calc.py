@@ -21,7 +21,7 @@ class Tuika(object):
         # Define
         self.calc_str = '' # 計算用の文字列
  
-        # Frame Setting
+ #サイズと余白の設定
         calc_frame = ttk.Frame(root, width=300, height=100) # 計算式と結果用のFrame
         calc_frame.propagate(False) # サイズが固定される
         calc_frame.pack(side=tk.TOP, padx=10, pady=20) # 余白の設定
@@ -29,7 +29,7 @@ class Tuika(object):
         button_frame.propagate(False) # サイズが固定される
         button_frame.pack(side=tk.BOTTOM) # 余白の設定
  
-        # 計算結果や計算式の場所の設定
+# 計算結果や計算式の場所の設定
         self.calc_var = tk.StringVar() # 計算式用の動的変数
         self.ans_var = tk.StringVar() # 結果用の動的変数
         calc_label = tk.Label(calc_frame, textvariable=self.calc_var, font=("Ink Free",20), bg="green2") # 計算式用のLabel
@@ -47,7 +47,7 @@ class Tuika(object):
                 button.grid(row=y, column=x) # 列や行を指定して配置
                 button.bind('<Button-1>', self.click_button) # Buttonが押された場合
 
-    #ボタンが押された時の設定
+#ボタンが押された時の設定
     def click_button(self, event):
         check = event.widget['text'] # 押したボタンのCheck
 
@@ -73,7 +73,7 @@ class Tuika(object):
  
         self.calc_var.set(self.calc_str)
     
- 
+#main 関数
 if __name__ == '__main__':
     # Window Setting
     root = tk.Tk()
