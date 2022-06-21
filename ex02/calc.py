@@ -29,11 +29,11 @@ class Tuika(object):
         button_frame.propagate(False) # サイズが固定される
         button_frame.pack(side=tk.BOTTOM) # 余白の設定
  
-        # Parts Setting
+        # 計算結果や計算式の場所の設定
         self.calc_var = tk.StringVar() # 計算式用の動的変数
         self.ans_var = tk.StringVar() # 結果用の動的変数
-        calc_label = tk.Label(calc_frame, textvariable=self.calc_var, font=("",20)) # 計算式用のLabel
-        ans_label = tk.Label(calc_frame, textvariable=self.ans_var, font=("",15)) # 結果用のLabel
+        calc_label = tk.Label(calc_frame, textvariable=self.calc_var, font=("Ink Free",20), bg="green2") # 計算式用のLabel
+        ans_label = tk.Label(calc_frame, textvariable=self.ans_var, font=("Ink Free",15), bg="turquoise1") # 結果用のLabel
         calc_label.pack(anchor=tk.E) # 右揃えで配置
         ans_label.pack(anchor=tk.E) # 右揃えで配置
  
@@ -41,7 +41,9 @@ class Tuika(object):
         for y, row in enumerate(BUTTON, 1): # Buttonの配置
             for x, num in enumerate(row):
                 #ボタンの色や大きさ等の変更
-                button = tk.Button(button_frame, text=num, font=('', 20), width=6, height=3, bg="blue",fg="red")
+                button = tk.Button(button_frame, text=num, 
+                                    font=('Ink Free', 20), width=6, height=3, 
+                                    bg="Sky Blue1",fg="maroon")
                 button.grid(row=y, column=x) # 列や行を指定して配置
                 button.bind('<Button-1>', self.click_button) # Buttonが押された場合
 
@@ -79,5 +81,5 @@ if __name__ == '__main__':
     root.resizable(width=False, height=False)
     root.title('三島電卓') # Window のタイトル
     Tuika(root)
-    # Display
+    # Display表示させる
     root.mainloop() # Window をループで回すことで Widgit に対応できるようになる
