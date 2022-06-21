@@ -20,7 +20,7 @@ if __name__ == "__main__":
     #ウィンドウ設定
     root = tk.Tk()
     root.title("tk")
-    root.geometry("300x500")
+    #root.geometry("300x500")
 
     entry = tk.Entry(root,
                     justify="right",
