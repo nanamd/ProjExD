@@ -1,7 +1,8 @@
 #tkを引っ張ってくる
 import tkinter as tk
-import tkinter.messagebox as tkm
+#import tkinter.messagebox as tkm
 
+""""
 #button_click関数
 def button_click(event):
     btn = event.widget
@@ -14,12 +15,14 @@ def click_equal(event):
     res = eval(eqn)
     entry.delete(0, tk.END)
     entry.insert(tk.END, str(res))
-
+"""
+#name関数
 if __name__ == "__main__":
+    #ウィンドウ設定
     root = tk.Tk()
     root.title("tk")
     root.geometry("300x500")
-
+"""
     entry = tk.Entry(root,
                     justify="right",
                     width=10,
@@ -44,6 +47,6 @@ if __name__ == "__main__":
                     )
     btn.bind("<1>",click_equal)
     btn.grid(row=r,column=c,padx=10,pady=10)
-
-    root.mainloop()
- 
+"""
+#ウィンドウを表示
+root.mainloop()
