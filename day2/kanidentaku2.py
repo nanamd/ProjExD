@@ -21,7 +21,7 @@ class CaluGui(object):
  
         # Window Setting
         app.title('簡易的な電卓を作ってみた') # Window のタイトル
-        app.geometry('300x450') # Window のサイズ
+        #app.geometry('300x450') # Window のサイズ
  
         # Frame Setting
         calc_frame = ttk.Frame(app, width=300, height=100) # 計算式と結果用のFrame
