@@ -20,7 +20,7 @@ class CaluGui(object):
         self.calc_str = '' # 計算用の文字列
  
         # Window Setting
-        app.title('電卓') # Window のタイトル
+        app.title('電卓(目標)') # Window のタイトル
         #app.geometry('300x450') # Window のサイズ
  
         # Frame Setting
