@@ -20,6 +20,7 @@ if __name__ == "__main__":
     #ウィンドウ設定
     root = tk.Tk()
     root.title("tk")
+    #サイズ指定なし→常にピッタリになる為
     #root.geometry("300x500")
 
     entry = tk.Entry(root,
