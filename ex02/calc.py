@@ -86,4 +86,4 @@ if __name__ == '__main__':
     root.title('三島電卓') # Window のタイトル
     Tuika(root)
     # Display表示させる
-root.mainloop() # Window をループで回すことで Widgit に対応できるようになる
+    root.mainloop() # Window をループで回すことで Widgit に対応できるようになる
