@@ -42,7 +42,7 @@ def main_proc():
     
 def img_select():
     global img
-    num = random.randint(0,9)
+    num = random.randint(0,10)
     img = f"fig/{num}.png"
     return img
 
@@ -61,6 +61,9 @@ if __name__ == "__main__":
     #print(maze_bg)
 
     tori = tk.PhotoImage(file=img_select())
+    tori=tori.zoom(8)
+    tori= tori.subsample(32)
+    
     mx,my=1,1
     cx,cy = 100*mx+50, 100*my+50
     canvas.create_image(cx,cy,image=tori,tag="tori")
