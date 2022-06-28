@@ -1,3 +1,4 @@
+from logging import root
 import tkinter
 
 key=""
@@ -22,5 +23,8 @@ def main_proc():
         my = my -1
     if key == "Right" and maze[my][mx+1]==0:
         my = my +1
-    canvas.coords("MYCHR",mx*)
+    canvas.coords("MYCHR",mx*80+40,my*80+40)
+    root.after(300,main_proc)
+
+root
     
