@@ -60,6 +60,7 @@ if __name__ == "__main__":
 
     #print(maze_bg)
 
+#img_selectで用意した画像を迷路の大きさに変えられるようにした。
     tori = tk.PhotoImage(file=img_select())
     tori=tori.zoom(3)
     tori= tori.subsample(20)
