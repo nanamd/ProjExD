@@ -12,7 +12,7 @@ def key_up(event):
     key=""
 
 def main_proc():
-    global cx, cy, key, mx, my, n, tori
+    global cx, cy, key, mx, my, n, moti
     #key:押されているキーkey/値：移動幅リスト[x,y]
 
     delta = {
@@ -30,11 +30,12 @@ def main_proc():
     
     
     cx,cy = 100*mx+50, 100*my+50
-    canvas.coords("tori",cx,cy)
+    canvas.coords("moti",cx,cy)
 
     if n>1:
-        tori = tk.PhotoImage(file=img_select())
-        canvas.itemconfig("tori",image=tori)
+        moti = tk.PhotoImage(file=img_select())
+
+        canvas.itemconfig("moti",image=moti)
         n = 0
     n += 1
 
@@ -61,13 +62,13 @@ if __name__ == "__main__":
     #print(maze_bg)
 
 #img_selectで用意した画像を迷路の大きさに変えられるようにした。
-    tori = tk.PhotoImage(file=img_select())
-    tori=tori.zoom(3)
-    tori= tori.subsample(20)
+    moti = tk.PhotoImage(file=img_select())
+    moti=moti.zoom(3)
+    moti= moti.subsample(20)
     
     mx,my=1,1
     cx,cy = 100*mx+50, 100*my+50
-    canvas.create_image(cx,cy,image=tori,tag="tori")
+    canvas.create_image(cx,cy,image=moti,tag="moti")
 
     key = ""
     root.bind("<KeyPress>",key_down)
