@@ -47,7 +47,7 @@ def main_proc():
         n = 0
     n += 1
 
-    root.after(20,main_proc)
+    root.after(100,main_proc)
 
 def img_select():
     global img
@@ -61,7 +61,7 @@ if __name__ == "__main__":
     root = tk.Tk()
     root.title("迷えるこうかとん")
 
-    canvas = tk.Canvas(root, width=1300, height=700,bg="black")
+    canvas = tk.Canvas(root, width=1500, height=900,bg="black")
     canvas.pack()
 
     maze_bg = maze_maker.make_maze(13, 7)
