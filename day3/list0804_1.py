@@ -20,3 +20,8 @@ maze = [
 for y in range(7):
     for x in range(10):
         if maze[y][x] == 1:
+            canvas.create_rectangle(x*80,
+                                    y*80,
+                                    x*80+80. y*80+80,
+                                    fill="gray")
+root.mainloop()
