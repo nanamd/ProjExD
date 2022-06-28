@@ -52,7 +52,7 @@ if __name__ == "__main__":
     root.title("迷えるもちさん")
 
     canvas = tk.Canvas(root,width=1500,height=900, 
-                        bg="Purple")
+                        bg="MediumPurple")
     canvas.pack()
 
     maze_bg = mm.make_maze(13,7)#1:壁/0;床 #canvasにmaze_bgを書く
