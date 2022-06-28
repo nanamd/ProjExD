@@ -52,7 +52,7 @@ if __name__ == "__main__":
     root.title("迷えるこうかとん")
 
     canvas = tk.Canvas(root,width=1500,height=900, 
-                        bg="black")
+                        bg="MediumPurple")
     canvas.pack()
 
     maze_bg = mm.make_maze(13,7)#1:壁/0;床 #canvasにmaze_bgを書く
@@ -61,8 +61,8 @@ if __name__ == "__main__":
     #print(maze_bg)
 
     tori = tk.PhotoImage(file=img_select())
-    tori=tori.zoom(8)
-    tori= tori.subsample(32)
+    tori=tori.zoom(3)
+    tori= tori.subsample(20)
     
     mx,my=1,1
     cx,cy = 100*mx+50, 100*my+50
