@@ -43,7 +43,7 @@ def main_proc():
     
 def img_select():
     global img
-    num = random.randint(0,10)
+    num = random.randint(0,10) #画像を回す
     img = f"fig/{num}.png"
     return img
 
