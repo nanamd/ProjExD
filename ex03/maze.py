@@ -6,6 +6,11 @@ def key_down(event):
     key=event.keysym
     #print(f"{key}が押され毎s多")
 
+def key_up(event):
+    global key
+    key=""
+
+
 if __name__ == "__main__":
     root = tk.Tk()
     root.title("迷えるこうかとん")
@@ -20,6 +25,6 @@ if __name__ == "__main__":
     key = ""
 
     root.bind("<KeyPress>",key_down)
+    root.after("<KeyPress>", key_up)
 
-    
     root.mainloop()
