@@ -44,7 +44,7 @@ def main_proc():
 def img_select():
     global img
     num = random.randint(0,10) #画像を回す
-    img = f"fig/{num}.png"
+    img = f"moti/{num}.png"
     return img
 
 if __name__ == "__main__":
