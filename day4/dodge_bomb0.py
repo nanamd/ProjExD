@@ -4,7 +4,7 @@ import sys
 
 def main():
     pg.display.set_caption("逃げろ！こうかとん")
-    screen = pg.display.set_mode((1600,900))
+    screen = pg.display.set_mode((1200,650))
     sc_rect = screen.get_rect()                     #画面用rect
     bg_img = pg.image.load("fig/pg_bg.jpg")         #背景画像用のsurface
     bg_rect = bg_img.get_rect()                     #背景用rect
