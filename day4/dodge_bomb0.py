@@ -34,7 +34,7 @@ def main():
     bomb_rect.centerx = random.randint(0,sc_rect.width)     #爆弾のx座標をランダムに決定
     bomb_rect.centery = random.randint(0,sc_rect.height)    #爆弾のy座標をランダムに決定
                                #爆弾用surfaceを画面用surfaceに貼り付ける
-    #vx, vy = +1, +1  
+    vx, vy = +1, +1  
 
     while True:
         screen.blit(bg_img,bg_rect) #スクリーンに背景画像を合成(サイズ通りに)
@@ -55,6 +55,13 @@ def main():
                 #    tori_rect.centerx -= delta[0]
                  #   tori_rect.centery -= delta[1]
         screen.blit(tori_img,tori_rect)
+
+        #　爆弾の移動
+        bomb_rect.move_ip(vx,vy)                    #爆弾用のrectを移動する
+        screen.blit(bomb, bomb_rect)                #爆弾の画像を貼り付ける
+        #ret = check_bound(sc_rect, bomb_rect)       #check_bound()関数で画面外にいるかの判定
+        #vx *= ret[0]                                #横方向に画面外なら、横方向速度の符号反転
+        #vy *= ret[1]                                #縦方向に画面外なら、縦方向速度の符号反転
         
         pg.display.update()
         clock.tick(1000) #1秒に1000画像を表示する(ぬるぬる動く)
