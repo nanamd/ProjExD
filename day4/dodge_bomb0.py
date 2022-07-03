@@ -1,5 +1,6 @@
 import pygame as pg
 import sys
+import random
 
 # 「↑,→,↓,←」キーを押されたときの反応を規定した辞書を作成
 key_delta = { pg.K_UP    : [0,-1],
@@ -26,9 +27,19 @@ def main():
     #blit(画像名,サイズ)
     screen.blit(tori_img, tori_rect) 
 
+    #　爆弾作成
+    bomb = pg.Surface((20,20))                              #爆弾用のsurface
+    pg.draw.circle(bomb, (255,0,0),(10,10),10)              #爆弾用surfaceに円を描く。色、中心、半径を指定
+    bomb_rect = bomb.get_rect()                             #爆弾用rect
+    bomb_rect.centerx = random.randint(0,sc_rect.width)     #爆弾のx座標をランダムに決定
+    bomb_rect.centery = random.randint(0,sc_rect.height)    #爆弾のy座標をランダムに決定
+                               #爆弾用surfaceを画面用surfaceに貼り付ける
+    #vx, vy = +1, +1  
+
     while True:
         screen.blit(bg_img,bg_rect) #スクリーンに背景画像を合成(サイズ通りに)
         screen.blit(tori_img,tori_rect)
+        screen.blit(bomb, bomb_rect) 
         for event in pg.event.get(): #イベント全てを格納する箱
             #ウィンドウの閉じるボタンを押したとき
             if event.type == pg.QUIT:
