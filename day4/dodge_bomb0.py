@@ -1,6 +1,13 @@
 import pygame as pg
 import sys
 
+# 「↑,→,↓,←」キーを押されたときの反応を規定した辞書を作成
+key_delta = { pg.K_UP    : [0,-1],
+              pg.K_DOWN  : [0,+1],
+              pg.K_LEFT  : [-1,0],
+              pg.K_RIGHT : [+1,0] }
+
+
 def main():
     pg.display.set_caption("逃げろ！こうかとん")
     screen = pg.display.set_mode((1200,650))
@@ -26,6 +33,18 @@ def main():
             #ウィンドウの閉じるボタンを押したとき
             if event.type == pg.QUIT:
                 return
+
+        #　こうかとんの移動
+        key_states = pg.key.get_pressed()                       #どのキーが押されているか記録した辞書を作成
+        for key, delta in key_delta.items():                    #key_deltaから
+            if key_states[key] == True:                         #keyが押されていたら
+                tori_rect.centerx += delta[0]                   #横方向の変化
+                tori_rect.centery += delta[1]                   #縦方向の変化
+               # if check_bound(sc_rect,tori_rect) != (1,1):     #移動後に画面範囲内か
+                #    tori_rect.centerx -= delta[0]
+                 #   tori_rect.centery -= delta[1]
+        screen.blit(tori_img,tori_rect)
+        
         pg.display.update()
         clock.tick(1000) #1秒に1000画像を表示する(ぬるぬる動く)
 
