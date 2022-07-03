@@ -25,7 +25,7 @@ def main(): #メイン処理を行う関数の定義
 
     while True:
         tmr = tmr +1 #tmrの値を1増やす
-        for event in pygame.event.get():
+        for event in pygame.event.get(): #イベント全てを格納する箱
             #ウィンドウの閉じるボタンを押したとき
             if event.type == pygame.QUIT:
                 pygame.quit() #pygameモジュールの初期化を解除
