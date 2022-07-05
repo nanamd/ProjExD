@@ -34,7 +34,7 @@ def main():
     #　爆弾貼り付け
     #bomb = pg.Surface((20,20))                              #爆弾用のsurface
     #pg.draw.circle(bomb, (255,0,0),(10,10),10)              #爆弾用surfaceに円を描く。色、中心、半径を指定
-    bomb_img=pg.image.load("fig/100.jpg")
+    bomb_img=pg.image.load("fig/100.png")
     bomb_img = pg.transform.rotozoom(bomb_img,0,0.1)
     bomb_rect = bomb_img.get_rect()                             #爆弾用rect
     bomb_rect.centerx = random.randint(0,sc_rect.width)     #爆弾のx座標をランダムに決定
@@ -42,6 +42,7 @@ def main():
     screen.blit(bomb_img, bomb_rect)                            #爆弾用surfaceを画面用surfaceに貼り付ける
     vx, vy = +1, +1                                         #爆弾の速さ
 
+    
 
     while True:
         screen.blit(bg_img, bg_rect)            #背景用surfaceを画面用surfaceに張り付ける
@@ -73,20 +74,31 @@ def main():
             #もちさんの表情を変える・爆発する
             expl_img = pg.image.load("fig/bakuhatsu.png")           #爆発画像の読み込み
             expl_img = pg.transform.rotozoom(expl_img, 0, 1/3)      #爆発画像のサイズ調整
-            screen.blit(bg_img, bg_rect)                            #こうかとんを消すために背景を再描画
+            screen.blit(bg_img, bg_rect)                            #もちさんを消すために背景を再描画
             screen.blit(expl_img, tori_rect)                        #爆発画像を貼り付ける
             pg.display.update()                                     #画面更新(爆発)
             clock.tick(1)                                           #1秒停止
             tori_img = pg.image.load("moti/11.png")                   #こうかとん画像用のsurface
-            tori_img= pg.transform.rotozoom(tori_img, 0, 1)       #こうかとん画像の拡大
+            tori_img= pg.transform.rotozoom(tori_img, 0, 1)       #もちさん画像の拡大
             screen.blit(bg_img, bg_rect)                            #爆発を消すために背景を再描画
             screen.blit(tori_img, tori_rect)                        #新しいこうかとんの画像に置き換える
             pg.display.update()                                     #画面更新(こうかとん泣き顔)
             clock.tick(1)                                           #1秒停止
-            text(screen, "GAME OVER",480,300,"RED",font=("Terminal",24))
+            #text(screen, "GAME OVER",480,300,"RED",font=("Terminal",24))
+            #GAME OVERの画像のはりつけ
+            go_img = pg.image.load("gameover/4.png")
+            go_img = pg.transform.rotozoom(go_img,0,1.5)
+            go_rect = go_img.get_rect()
+            screen.blit(go_img, go_rect)
+            pg.display.update()
+            clock.tick(2)
             return                                                  #こうかとん用のRectが爆弾用のRectと衝突していたらreturn
 
 
+        font = pg.font.Font(None,100)
+        text = font.render("GAME OVER",True,(255,255,255))
+        #screen.blit(text[screen.get_width(200),screen.get_height(200)])
+        #screen.blit(text[screen.width,screen.get_height(200)])
         pg.display.update()  #画面の更新
         clock.tick(1000)     #1000fpsに設定
 
