@@ -1,3 +1,4 @@
+from re import A
 import pygame as pg
 import sys
 import random
@@ -64,6 +65,10 @@ def main():
         vx *= ret[0]                                #横方向に画面外なら、横方向速度の符号反転
         vy *= ret[1]                                #縦方向に画面外なら、縦方向速度の符号反転
 
+        #　爆弾の当たり判定
+        if tori_rect.colliderect(bomb_rect) == True: #toriがbombと重なったらTrue
+            return #終了(mainから抜ける)
+
         pg.display.update()
         clock.tick(1000) #1秒に1000画像を表示する(ぬるぬる動く)
 
@@ -80,4 +85,4 @@ if __name__ == "__main__":
     pg.init()        #モジュール初期化
     main()
     pg.quit()        #モジュール初期化解除
-    sys.exit()       #プログラム終了
+    sys.exit()       #プログラム終了(強制終了)
