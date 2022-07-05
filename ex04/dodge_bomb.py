@@ -20,7 +20,7 @@ def main():
     clock = pg.time.Clock() #表示時間の設定
 
 
-    #こうかとん磔
+    #もちさん磔
     tori_img = pg.image.load("moti/6.png")                   #こうかとん画像用のsurface
     #rotozoomは画像の拡大縮小回転(画像名,回転,拡縮)
     tori_img=  pg.transform.rotozoom(tori_img, 0, 1)      #こうかとん画像の拡大
