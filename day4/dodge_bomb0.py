@@ -1,4 +1,4 @@
-from re import A
+
 import pygame as pg
 import sys
 import random
