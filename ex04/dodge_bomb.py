@@ -12,7 +12,7 @@ key_delta = { pg.K_UP    : [0,-1],
 
 def main():
     #　ウィンドウ作成・背景貼り付け
-    pg.display.set_caption("逃げろ！もちさん")
+    pg.display.set_caption("逃げろ！もちさん")      #剣持をマシュマロとミニ剣持から逃げる
     screen = pg.display.set_mode((1200,650))
     sc_rect = screen.get_rect()                     #画面用rect
     bg_img = pg.image.load("fig/pg_bg.jpg")         #背景画像用のsurface
