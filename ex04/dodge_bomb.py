@@ -57,7 +57,7 @@ def main():
             if event.type == pg.QUIT:
                 return
 
-        #　こうかとんの移動
+        #　もちさんの移動
         key_states = pg.key.get_pressed()                       #どのキーが押されているか記録した辞書を作成
         for key, delta in key_delta.items():                    #key_deltaから
             if key_states[key] == True:                         #keyが押されていたら
