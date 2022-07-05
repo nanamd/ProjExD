@@ -52,17 +52,28 @@ def main():
             if key_states[key] == True:                         #keyが押されていたら
                 tori_rect.centerx += delta[0]                   #横方向の変化
                 tori_rect.centery += delta[1]                   #縦方向の変化
+                if check_bound(sc_rect,tori_rect) != (1,1):     #移動後に画面範囲内か
+                    tori_rect.centerx -= delta[0]
+                    tori_rect.centery -= delta[1]
         screen.blit(tori_img,tori_rect)
 
         #　爆弾の移動
         bomb_rect.move_ip(vx,vy)                    #爆弾用のrectを移動する
         screen.blit(bomb, bomb_rect)                #爆弾の画像を貼り付ける
-        
-
-
+        ret = check_bound(sc_rect, bomb_rect)       #check_bound()関数で画面外にいるかの判定
+        vx *= ret[0]                                #横方向に画面外なら、横方向速度の符号反転
+        vy *= ret[1]                                #縦方向に画面外なら、縦方向速度の符号反転
 
         pg.display.update()
         clock.tick(1000) #1秒に1000画像を表示する(ぬるぬる動く)
+
+def check_bound(sc_r, obj_r):     #引数は、画面用Rect,{こうかとん,爆弾]Rect
+    #画面内なら：+1 / 画面外なら：-1を返す
+    x, y = +1, +1
+    if obj_r.left < sc_r.left or sc_r.right < obj_r.right: x = -1   #画面外に行ったらx=-1
+    if obj_r.top < sc_r.top or sc_r.bottom < obj_r.bottom: y = -1   #画面外に行ったらy=-1
+    return x, y
+
 
 
 if __name__ == "__main__":
