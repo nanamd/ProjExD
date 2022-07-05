@@ -25,7 +25,7 @@ def main():
     #rotozoomは画像の拡大縮小回転(画像名,回転,拡縮)
     tori_img=  pg.transform.rotozoom(tori_img, 0, 1)      #こうかとん画像の拡大
     tori_rect = tori_img.get_rect()                         #こうかとん画像用のrect
-    tori_rect.center =900, 450                              #こうかとんの中心を900,400に指定
+    tori_rect.center =900, 450                              #こうかとんの中心を900,450に指定
     #blit(画像名,サイズ)
     screen.blit(tori_img, tori_rect) 
 
