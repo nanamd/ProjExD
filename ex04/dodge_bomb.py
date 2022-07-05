@@ -34,6 +34,7 @@ def main():
     bomb_rect.centerx = random.randint(0,sc_rect.width)     #爆弾のx座標をランダムに決定
     bomb_rect.centery = random.randint(0,sc_rect.height)    #爆弾のy座標をランダムに決定
                                #爆弾用surfaceを画面用surfaceに貼り付ける
+    vx, vy = +1, +1  
 
 
     while True:
@@ -52,6 +53,12 @@ def main():
                 tori_rect.centerx += delta[0]                   #横方向の変化
                 tori_rect.centery += delta[1]                   #縦方向の変化
         screen.blit(tori_img,tori_rect)
+
+        #　爆弾の移動
+        bomb_rect.move_ip(vx,vy)                    #爆弾用のrectを移動する
+        screen.blit(bomb, bomb_rect)                #爆弾の画像を貼り付ける
+        
+
 
 
         pg.display.update()
