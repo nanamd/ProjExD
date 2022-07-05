@@ -23,7 +23,7 @@ def main():
     tori_img = pg.image.load("moti/6.png")                   #こうかとん画像用のsurface
     tori_img=  pg.transform.rotozoom(tori_img, 0, 1)      #こうかとん画像の拡大
     tori_rect = tori_img.get_rect()                         #こうかとん画像用のrect
-    tori_rect.center =900, 400                              #こうかとんの中心を900,400に指定
+    tori_rect.center =900, 450                              #こうかとんの中心を900,400に指定
     screen.blit(tori_img, tori_rect)                        #こうかとん画像用surfaceを画面用surfaceに張り付ける
 
 
