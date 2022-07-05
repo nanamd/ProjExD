@@ -103,7 +103,7 @@ def main():
             go_rect = go_img.get_rect()
             screen.blit(go_img, go_rect)
             pg.display.update()
-            clock.tick(2)
+            clock.tick(0.5)
 
             return #終了(mainから抜ける)
 
