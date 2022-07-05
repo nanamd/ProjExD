@@ -1,3 +1,7 @@
+from asyncio import create_task
+from cgitb import text
+from tkinter import font
+from venv import create
 import pygame as pg
 import sys
 import random
@@ -28,12 +32,14 @@ def main():
 
 
     #　爆弾貼り付け
-    bomb = pg.Surface((20,20))                              #爆弾用のsurface
-    pg.draw.circle(bomb, (255,0,0),(10,10),10)              #爆弾用surfaceに円を描く。色、中心、半径を指定
-    bomb_rect = bomb.get_rect()                             #爆弾用rect
+    #bomb = pg.Surface((20,20))                              #爆弾用のsurface
+    #pg.draw.circle(bomb, (255,0,0),(10,10),10)              #爆弾用surfaceに円を描く。色、中心、半径を指定
+    bomb_img=pg.image.load("fig/100.jpg")
+    bomb_img = pg.transform.rotozoom(bomb_img,0,0.1)
+    bomb_rect = bomb_img.get_rect()                             #爆弾用rect
     bomb_rect.centerx = random.randint(0,sc_rect.width)     #爆弾のx座標をランダムに決定
     bomb_rect.centery = random.randint(0,sc_rect.height)    #爆弾のy座標をランダムに決定
-    screen.blit(bomb, bomb_rect)                            #爆弾用surfaceを画面用surfaceに貼り付ける
+    screen.blit(bomb_img, bomb_rect)                            #爆弾用surfaceを画面用surfaceに貼り付ける
     vx, vy = +1, +1                                         #爆弾の速さ
 
 
@@ -56,7 +62,7 @@ def main():
 
         #　爆弾の移動
         bomb_rect.move_ip(vx,vy)                    #爆弾用のrectを移動する
-        screen.blit(bomb, bomb_rect)                #爆弾の画像を貼り付ける
+        screen.blit(bomb_img, bomb_rect)                #爆弾の画像を貼り付ける
         ret = check_bound(sc_rect, bomb_rect)       #check_bound()関数で画面外にいるかの判定
         vx *= ret[0]                                #横方向に画面外なら、横方向速度の符号反転
         vy *= ret[1]                                #縦方向に画面外なら、縦方向速度の符号反転
@@ -64,7 +70,7 @@ def main():
 
         #　爆弾の当たり判定
         if tori_rect.colliderect(bomb_rect) == True:
-            #こうかとんの表情を変える・爆発する
+            #もちさんの表情を変える・爆発する
             expl_img = pg.image.load("fig/bakuhatsu.png")           #爆発画像の読み込み
             expl_img = pg.transform.rotozoom(expl_img, 0, 1/3)      #爆発画像のサイズ調整
             screen.blit(bg_img, bg_rect)                            #こうかとんを消すために背景を再描画
@@ -77,6 +83,7 @@ def main():
             screen.blit(tori_img, tori_rect)                        #新しいこうかとんの画像に置き換える
             pg.display.update()                                     #画面更新(こうかとん泣き顔)
             clock.tick(1)                                           #1秒停止
+            text(screen, "GAME OVER",480,300,"RED",font=("Terminal",24))
             return                                                  #こうかとん用のRectが爆弾用のRectと衝突していたらreturn
 
 
