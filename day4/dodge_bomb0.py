@@ -20,9 +20,9 @@ def main():
     
 
     #こうかとん磔
-    tori_img = pg.image.load("fig/6.png")                   #こうかとん画像用のsurface
+    tori_img = pg.image.load("moti/6.png")                   #こうかとん画像用のsurface
     #rotozoomは画像の拡大縮小回転(画像名,回転,拡縮)
-    tori_img=  pg.transform.rotozoom(tori_img, 0, 2.0)      #こうかとん画像の拡大
+    tori_img=  pg.transform.rotozoom(tori_img, 0, 1)      #こうかとん画像の拡大
     tori_rect = tori_img.get_rect()                         #こうかとん画像用のrect
     tori_rect.center =900, 400                              #こうかとんの中心を900,400に指定
     #blit(画像名,サイズ)
@@ -46,7 +46,7 @@ def main():
             if event.type == pg.QUIT:
                 return
 
-        #　こうかとんの移動
+        #　もちさんの移動
         key_states = pg.key.get_pressed()                       #どのキーが押されているか記録した辞書を作成
         for key, delta in key_delta.items():                    #key_deltaから
             if key_states[key] == True:                         #keyが押されていたら
