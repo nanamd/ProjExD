@@ -14,3 +14,5 @@
 - 爆弾を増やす
 - 爆弾に当たったら「GAME OVER」を表示させる
 ### メモ
+- tori_img=  pg.transform.rotozoom(tori_img, 0, 1) は（画像,回転,大きさ）
+- get_rect で画像や作ったものを合成（貼り付ける）
