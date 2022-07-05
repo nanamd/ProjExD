@@ -71,7 +71,7 @@ def main():
             screen.blit(expl_img, tori_rect)                        #爆発画像を貼り付ける
             pg.display.update()                                     #画面更新(爆発)
             clock.tick(1)                                           #1秒停止
-            tori_img = pg.image.load("moti/8.png")                   #こうかとん画像用のsurface
+            tori_img = pg.image.load("moti/11.png")                   #こうかとん画像用のsurface
             tori_img= pg.transform.rotozoom(tori_img, 0, 1)       #こうかとん画像の拡大
             screen.blit(bg_img, bg_rect)                            #爆発を消すために背景を再描画
             screen.blit(tori_img, tori_rect)                        #新しいこうかとんの画像に置き換える
