@@ -331,7 +331,7 @@ def main(winstyle=0):
         dirty = all.draw(screen)
         pg.display.update(dirty)
 
-        # cap the framerate at 40fps. Also called 40HZ or 40 times per second.
+        # 1秒に40回画像が更新されて綺麗な流れで画面出力される
         clock.tick(40)
 
     if pg.mixer:
