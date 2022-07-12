@@ -3,7 +3,7 @@ import sys
 
 WHITE = (255,255,255)
 
-imgBtlBG = pygame.image.load("btlbg.png")
+imgBtlBG = pygame.image.load("py_samples/Chapter11/btlbg.png")
 imgEnemy = None
 
 emy_num = 0
@@ -15,7 +15,7 @@ def init_battle():
     emy_num = emy_num + 1
     if emy_num == 5:
         emy_num = 1
-    imgEnemy = pygame.image.load("enemy"+str(emy_num)+".png")
+    imgEnemy = pygame.image.load("py_samples/Chapter11/enemy"+str(emy_num)+".png")
     emy_x = 440-imgEnemy.get_width()/2
     emy_y = 560-imgEnemy.get_height()
 
