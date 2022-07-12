@@ -5,7 +5,7 @@ if not pg.image.get_extended():
     raise SystemExit("Sorry, extended image module required")
 
 
-# game constants
+
 MAX_SHOTS = 2  # スクリーンにこうかとんを表示
 ALIEN_ODDS = 22  # 敵の設定
 BOMB_ODDS = 60  # 爆弾の設定
@@ -169,10 +169,10 @@ class Score(pg.sprite.Sprite):
             self.lastscore = SCORE
             msg = "Score: %d" % SCORE
             self.image = self.font.render(msg, 0, self.color)
-#"""
+
 
 def main(winstyle=0):
-    # Initialize pygame
+    
     if pg.get_sdl_version()[0] == 2:
         pg.mixer.pre_init(44100, 32, 2, 1024)
     pg.init()
@@ -181,7 +181,7 @@ def main(winstyle=0):
         pg.mixer = None
 
     fullscreen = False
-    # Set the display mode
+    
     winstyle = 0  # |FULLSCREEN
     bestdepth = pg.display.mode_ok(SCREENRECT.size, winstyle, 32)
     screen = pg.display.set_mode(SCREENRECT.size, winstyle, bestdepth)
@@ -196,13 +196,13 @@ def main(winstyle=0):
     Bomb.images = [load_image("starship_burner.png")]
     Shot.images = [load_image("bullet.png")]
 
-    # decorate the game window
+    # 画面に乗せる画像の設定
     icon = pg.transform.scale(Alien.images[0], (32, 32))
     pg.display.set_icon(icon)
     pg.display.set_caption("Pygame Aliens")
     pg.mouse.set_visible(0)
 
-    # create the background, tile the bgd image
+    # 背景の設定
     bgdtile = load_image("galaxy.png")
     background = pg.Surface(SCREENRECT.size)
     for x in range(0, SCREENRECT.width, bgdtile.get_width()):
@@ -210,7 +210,7 @@ def main(winstyle=0):
     screen.blit(background, (0, 0))
     pg.display.flip()
 
-    # load the sound effects
+    # 爆弾の画像設定
     boom_sound = load_sound("boom.wav")
     shoot_sound = load_sound("car_door.wav")
     if pg.mixer:
@@ -218,37 +218,37 @@ def main(winstyle=0):
         pg.mixer.music.load(music)
         pg.mixer.music.play(-1)
 
-    # Initialize Game Groups
+  
     aliens = pg.sprite.Group()
     shots = pg.sprite.Group()
     bombs = pg.sprite.Group()
     all = pg.sprite.RenderUpdates()
     lastalien = pg.sprite.GroupSingle()
 
-    # assign default groups to each sprite class
+   
     Player.containers = all
     Alien.containers = aliens, all, lastalien
     Shot.containers = shots, all
     Bomb.containers = bombs, all
     Explosion.containers = all
-    #Score.containers = all
+    
 
-    # Create Some Starting Values
+    
     global score
     alienreload = ALIEN_RELOAD
     clock = pg.time.Clock()
 #"""
-    # initialize our starting sprites
+    
     global SCORE
     player = Player()
-    Alien()  # note, this 'lives' because it goes into a sprite group
+    Alien()  
     if pg.font:
         all.add(Score())
 #"""
-    # Run our main loop whilst the player is alive.
+    
     while player.alive():
 
-        # get input
+        
         for event in pg.event.get():
             if event.type == pg.QUIT:
                 return
@@ -275,13 +275,13 @@ def main(winstyle=0):
 
         keystate = pg.key.get_pressed()
 
-        # clear/erase the last drawn sprites
+       
         all.clear(screen, background)
 
-        # update all the sprites
+        
         all.update()
 
-        # handle player input
+        
         direction = keystate[pg.K_RIGHT] - keystate[pg.K_LEFT]
         player.move(direction)
         firing = keystate[pg.K_SPACE]
@@ -291,18 +291,18 @@ def main(winstyle=0):
                 shoot_sound.play()
         player.reloading = firing
 
-        # Create new alien
+        
         if alienreload:
             alienreload = alienreload - 1
         elif not int(random.random() * ALIEN_ODDS):
             Alien()
             alienreload = ALIEN_RELOAD
 
-        # Drop bombs
+        
         if lastalien and not int(random.random() * BOMB_ODDS):
             Bomb(lastalien.sprite)
 
-        # Detect collisions between aliens and players.
+       
         for alien in pg.sprite.spritecollide(player, aliens, 1):
             if pg.mixer:
                 boom_sound.play()
@@ -311,14 +311,14 @@ def main(winstyle=0):
             SCORE = SCORE + 1
             player.kill()
 
-        # See if shots hit the aliens.
+        
         for alien in pg.sprite.groupcollide(aliens, shots, 1, 1).keys():
             if pg.mixer:
                 boom_sound.play()
             Explosion(alien)
             SCORE = SCORE + 1
 
-        # See if alien boms hit the player.
+        
         for bomb in pg.sprite.spritecollide(player, bombs, 1):
             if pg.mixer:
                 boom_sound.play()
@@ -326,7 +326,7 @@ def main(winstyle=0):
             Explosion(bomb)
             player.kill()
 
-        # draw the scene
+        # 画面表示
         dirty = all.draw(screen)
         pg.display.update(dirty)
 
@@ -338,7 +338,7 @@ def main(winstyle=0):
     pg.time.wait(1000)
 
 
-# call the "main" function if running this script
+# 最後にmainが実行される
 if __name__ == "__main__":
     main()
     pg.quit()
