@@ -4,8 +4,8 @@ import sys
 WHITE = (255,255,255)
 BLACK = (  0,  0,  0)
 
-imgBtlBG = pygame.image.load("btlbg.png")
-imgEnemy = pygame.image.load("enemy1.png")
+imgBtlBG = pygame.image.load("py_samples/Chapter11/btlbg.png")
+imgEnemy = pygame.image.load("py_samples/Chapter11/enemy1.png")
 emy_x = 440-imgEnemy.get_width()/2
 emy_y = 560-imgEnemy.get_height()
 
