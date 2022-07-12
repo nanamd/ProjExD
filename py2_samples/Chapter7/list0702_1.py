@@ -5,17 +5,17 @@ import random
 from pygame.locals import *
 
 # 画像の読み込み
-img_galaxy = pygame.image.load("image_gl/galaxy.png")
+img_galaxy = pygame.image.load("py2_samples/Chapter7/image_gl/galaxy.png")
 img_sship = [
-    pygame.image.load("image_gl/starship.png"),
-    pygame.image.load("image_gl/starship_l.png"),
-    pygame.image.load("image_gl/starship_r.png"),
-    pygame.image.load("image_gl/starship_burner.png")
+    pygame.image.load("py2_samples/Chapter7/image_gl/starship.png"),
+    pygame.image.load("py2_samples/Chapter7/image_gl/starship_l.png"),
+    pygame.image.load("py2_samples/Chapter7/image_gl/starship_r.png"),
+    pygame.image.load("py2_samples/Chapter7/image_gl/starship_burner.png")
 ]
-img_weapon = pygame.image.load("image_gl/bullet.png")
+img_weapon = pygame.image.load("py2_samples/Chapter7/image_gl/bullet.png")
 img_enemy = [
-    pygame.image.load("image_gl/enemy0.png"),
-    pygame.image.load("image_gl/enemy1.png")
+    pygame.image.load("py2_samples/Chapter7/image_gl/enemy0.png"),
+    pygame.image.load("py2_samples/Chapter7/image_gl/enemy1.png")
 ]
 
 tmr = 0
