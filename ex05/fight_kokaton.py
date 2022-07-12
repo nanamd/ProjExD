@@ -25,7 +25,6 @@ def load_image(file):
         raise SystemExit('Could not load image "%s" %s' % (file, pg.get_error()))
     return surface.convert()
 
-
 def load_sound(file):
    
     if not pg.mixer:
