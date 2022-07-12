@@ -16,9 +16,9 @@ dungeon = []
 for y in range(DUNGEON_H):
     dungeon.append([0]*DUNGEON_W)
 
-imgWall = pygame.image.load("wall.png")
-imgFloor = pygame.image.load("floor.png")
-imgPlayer = pygame.image.load("player.png")
+imgWall = pygame.image.load("py_samples/Chapter11/wall.png")
+imgFloor = pygame.image.load("py_samples/Chapter11/floor.png")
+imgPlayer = pygame.image.load("py_samples/Chapter11/player.png")
 
 pl_x = 4
 pl_y = 4
