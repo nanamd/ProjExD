@@ -18,8 +18,8 @@ dungeon = []
 for y in range(DUNGEON_H):
     dungeon.append([0]*DUNGEON_W)
 
-imgWall = pygame.image.load("wall.png")
-imgFloor = pygame.image.load("floor.png")
+imgWall = pygame.image.load("py_samples/Chapter11/wall.png")
+imgFloor = pygame.image.load("py_samples/Chapter11/floor.png")
 
 def make_dungeon(): # ダンジョンの自動生成
     XP = [ 0, 1, 0,-1]
