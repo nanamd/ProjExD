@@ -95,12 +95,12 @@ def main(): # メインループ
 root = tkinter.Tk()
 
 img_bg = [
-    tkinter.PhotoImage(file="image_penpen/chip00.png"),
-    tkinter.PhotoImage(file="image_penpen/chip01.png"),
-    tkinter.PhotoImage(file="image_penpen/chip02.png"),
-    tkinter.PhotoImage(file="image_penpen/chip03.png")
+    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/chip00.png"),
+    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/chip01.png"),
+    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/chip02.png"),
+    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/chip03.png")
 ]
-img_pen = tkinter.PhotoImage(file="image_penpen/pen03.png")
+img_pen = tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/pen03.png")
 
 root.title("はらはら ペンギン ラビリンス")
 root.resizable(False, False)

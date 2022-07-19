@@ -162,38 +162,38 @@ def main(): # メインループ
 root = tkinter.Tk()
 
 img_bg = [
-    tkinter.PhotoImage(file="image_penpen/chip00.png"),
-    tkinter.PhotoImage(file="image_penpen/chip01.png"),
-    tkinter.PhotoImage(file="image_penpen/chip02.png"),
-    tkinter.PhotoImage(file="image_penpen/chip03.png")
+    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/chip00.png"),
+    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/chip01.png"),
+    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/chip02.png"),
+    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/chip03.png")
 ]
 img_pen = [
-    tkinter.PhotoImage(file="image_penpen/pen00.png"),
-    tkinter.PhotoImage(file="image_penpen/pen01.png"),
-    tkinter.PhotoImage(file="image_penpen/pen02.png"),
-    tkinter.PhotoImage(file="image_penpen/pen03.png"),
-    tkinter.PhotoImage(file="image_penpen/pen04.png"),
-    tkinter.PhotoImage(file="image_penpen/pen05.png"),
-    tkinter.PhotoImage(file="image_penpen/pen06.png"),
-    tkinter.PhotoImage(file="image_penpen/pen07.png"),
-    tkinter.PhotoImage(file="image_penpen/pen08.png"),
-    tkinter.PhotoImage(file="image_penpen/pen09.png"),
-    tkinter.PhotoImage(file="image_penpen/pen10.png"),
-    tkinter.PhotoImage(file="image_penpen/pen11.png")
+    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/pen00.png"),
+    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/pen01.png"),
+    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/pen02.png"),
+    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/pen03.png"),
+    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/pen04.png"),
+    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/pen05.png"),
+    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/pen06.png"),
+    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/pen07.png"),
+    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/pen08.png"),
+    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/pen09.png"),
+    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/pen10.png"),
+    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/pen11.png")
 ]
 img_red = [
-    tkinter.PhotoImage(file="image_penpen/red00.png"),
-    tkinter.PhotoImage(file="image_penpen/red01.png"),
-    tkinter.PhotoImage(file="image_penpen/red02.png"),
-    tkinter.PhotoImage(file="image_penpen/red03.png"),
-    tkinter.PhotoImage(file="image_penpen/red04.png"),
-    tkinter.PhotoImage(file="image_penpen/red05.png"),
-    tkinter.PhotoImage(file="image_penpen/red06.png"),
-    tkinter.PhotoImage(file="image_penpen/red07.png"),
-    tkinter.PhotoImage(file="image_penpen/red08.png"),
-    tkinter.PhotoImage(file="image_penpen/red09.png"),
-    tkinter.PhotoImage(file="image_penpen/red10.png"),
-    tkinter.PhotoImage(file="image_penpen/red11.png")
+    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/red00.png"),
+    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/red01.png"),
+    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/red02.png"),
+    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/red03.png"),
+    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/red04.png"),
+    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/red05.png"),
+    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/red06.png"),
+    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/red07.png"),
+    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/red08.png"),
+    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/red09.png"),
+    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/red10.png"),
+    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/red11.png")
 ]
 
 root.title("はらはら ペンギン ラビリンス")

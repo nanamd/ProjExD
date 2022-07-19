@@ -25,10 +25,10 @@ root.resizable(False, False)
 canvas = tkinter.Canvas(width=720, height=540)
 canvas.pack()
 img_bg = [
-    tkinter.PhotoImage(file="image_penpen/chip00.png"),
-    tkinter.PhotoImage(file="image_penpen/chip01.png"),
-    tkinter.PhotoImage(file="image_penpen/chip02.png"),
-    tkinter.PhotoImage(file="image_penpen/chip03.png")
+    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/chip00.png"),
+    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/chip01.png"),
+    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/chip02.png"),
+    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/chip03.png")
 ]
 draw_screen()
 root.mainloop()
