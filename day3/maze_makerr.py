@@ -37,5 +37,4 @@ def make_maze():
     for y in range(2,MAZE_H-2,2):
         for x in range(2, MAZE_W-2,2):
             d= random.randint(0,3)
-            if x > 2:
-                
+            if x > 2
