@@ -198,33 +198,33 @@ img_bg = [  #道の画像
 ]
 #青いペンギンの画像
 img_pen = [
-    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/pen00.png"),
-    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/pen01.png"),
-    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/pen02.png"),
-    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/pen03.png"),
-    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/pen04.png"),
-    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/pen05.png"),
-    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/pen06.png"),
-    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/pen07.png"),
-    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/pen08.png"),
-    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/pen09.png"),
-    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/pen10.png"),
-    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/pen11.png")
+    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/pen00.png"),#青ペンギン
+    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/pen01.png"),#青ペンギン
+    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/pen02.png"),#青ペンギン
+    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/pen03.png"),#青ペンギン
+    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/pen04.png"),#青ペンギン
+    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/pen05.png"),#青ペンギン
+    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/pen06.png"),#青ペンギン
+    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/pen07.png"),#青ペンギン
+    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/pen08.png"),#青ペンギン
+    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/pen09.png"),#青ペンギン
+    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/pen10.png"),#青ペンギン
+    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/pen11.png")#青ペンギン
 ]
 #赤いペンギンの画像
 img_red = [
-    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/red00.png"),
-    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/red01.png"),
-    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/red02.png"),
-    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/red03.png"),
-    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/red04.png"),
-    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/red05.png"),
-    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/red06.png"),
-    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/red07.png"),
-    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/red08.png"),
-    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/red09.png"),
-    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/red10.png"),
-    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/red11.png")
+    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/red00.png"),#赤ペンギン
+    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/red01.png"),#赤ペンギン
+    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/red02.png"),#赤ペンギン
+    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/red03.png"),#赤ペンギン
+    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/red04.png"),#赤ペンギン
+    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/red05.png"),#赤ペンギン
+    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/red06.png"),#赤ペンギン
+    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/red07.png"),#赤ペンギン
+    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/red08.png"),#赤ペンギン
+    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/red09.png"),#赤ペンギン
+    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/red10.png"),#赤ペンギン
+    tkinter.PhotoImage(file="py2_samples/Chapter3/image_penpen/red11.png")#赤ペンギン
 ]
 
 root.title("食中毒には気をつけろ！") #タイトル
